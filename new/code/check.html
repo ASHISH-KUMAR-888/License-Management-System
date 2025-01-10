@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Themes</title>
+
+    <!--Datatables js-->
+
+    <script
+      type="text/javascript"
+      src="../../assets/js/jquery.dataTables.min.js"
+    ></script>
+
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+
+    <script
+      type="text/javascript"
+      src="../../assets/js/dataTables.responsive.min.js"
+    ></script>
+
+    <!-- CSS -->
+    <!-- validation -->
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/theme.css" />
+
+    <!-- Select2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
+
+    <link rel="stylesheet" href="../../assets/style/hamburger.css" />
+    <link rel="stylesheet" href="../../assets/style/newstyle05_07.css" />
+    <link rel="stylesheet" href="../../assets/style/warehousestyle.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <form id="myForm" onsubmit="return validateSelection()">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="purchasegrp">
+            <label for="software-name" class="purchaseinfo"
+              ><span class="aster">* </span>Software Name</label
+            >
+            <input
+              type="text"
+              id="software-name"
+              class="form-control purchaseselects check_main_input_soft"
+              id="customer-name"
+              placeholder="Enter Software Name"
+              value="OS License"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <label class="common_check_labels">Check-out to</label>
+
+          <div class="checkbox-check-group">
+            <input
+              class="tick_check_btn_s"
+              type="checkbox"
+              id="staff"
+              name="checkout"
+              checked
+              onchange="updateLabel('staff')"
+              onclick="updatePlaceholder()"
+            />
+
+            <label class="common_check_labels" for="staff">Staff</label>
+
+            <input
+              class="tick_check_btn_s"
+              type="checkbox"
+              id="asset"
+              name="checkout"
+              onchange="updateLabel('asset')"
+              onclick="updatePlaceholder()"
+            />
+
+            <label class="common_check_labels" for="asset">Asset</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row STaFf_COntI-ZoNNE_LEviN">
+        <div class="col-md-12">
+          <div
+            class="dropdown-component purchasegrp rem_bott_mar supp_mar_ch_a"
+          >
+            <label
+              for="tags"
+              id="dynamic-label"
+              class="purchaseinfo ad_ma_labb_enn_zn common_check_labels My-GOnE_LaB-daSH"
+              ><span class="aster">* </span>Staff</label
+            >
+            <div class="dropdown">
+              <div class="display-input-container">
+                <input
+                  id="staff-select"
+                  type="text"
+                  class="display-input"
+                  placeholder="select staff"
+                  readonly
+                />
+                <span class="dropdown-icon"
+                  ><i class="fa-solid fa-caret-down Droppy_IcOn_BoTHh"></i
+                ></span>
+              </div>
+
+              <div class="search-container">
+                <input
+                  type="text"
+                  class="search-input maIN_inuT-SErCH SELct_fONg-KonGGTU"
+                  placeholder="Search..."
+                />
+                <span class="clear-icon">&#10006;</span>
+
+                <div class="dropdown-content DROppy_COn-DaTA-aALL">
+                  <div class="option">zz</div>
+                  <div class="option">WIES_AMIT PRAJAPATI</div>
+                  <div class="option">VILMA DESCHAMPS</div>
+                  <div class="option">Vaishali Patil</div>
+                  <div class="option">T-shirt 135 T-shirt 1353</div>
+                  <div class="option">Timo Renner</div>
+                  <div class="option">tiko tako</div>
+                  <div class="option">TestUserOgi1 TestUserOgi1</div>
+                  <div class="option">Testt Test</div>
+                  <div class="option">Test Test</div>
+                  <div class="option">test1 test</div>
+                  <div class="option">test CB</div>
+                  <div class="option">Test 1</div>
+                  <div class="option">test test</div>
+                  <div class="option">Test 100</div>
+                  <div class="option">Test Yshshw</div>
+                  <div class="option">Staff Test Andrew</div>
+                  <div class="option">Sree Lekha</div>
+                  <div class="option">sonmt test</div>
+                  <div class="option">Someone Topfun</div>
+                  <div class="option">Shahem Hussein</div>
+                  <div class="option">saurabh rajput</div>
+                  <div class="option">Sale Agent 1 Agent</div>
+                  <div class="option">Rodolph BILOA</div>
+                  <div class="option">Robert P</div>
+                  <div class="option">Rizwan Ali</div>
+                  <div class="option">Rick Behl</div>
+                  <div class="option">QWERTY YUIOP</div>
+                  <div class="option">Purchase Manager</div>
+                  <div class="option">PuneCOW IGF</div>
+                  <div class="option">Pulse Purpose</div>
+                  <div class="option">Purebas Pruebas</div>
+                  <div class="option">Prithivi R</div>
+                  <div class="option">PP PP</div>
+                  <div class="option">Person One</div>
+                  <div class="option">NO NO</div>
+                  <div class="option">nestor espinoza nestor</div>
+                  <div class="option">Nehemie Lusamba</div>
+                  <div class="option">Mundir Abbot</div>
+                  <div class="option">MOP Special</div>
+                  <div class="option">mohanand mohanad</div>
+                  <div class="option">Mohammed Haii</div>
+                  <div class="option">Milena David</div>
+                  <div class="option">Mee Nii</div>
+                  <div class="option">Mee Nii-2</div>
+                  <div class="option">Md Delwar Hossain</div>
+                  <div class="option">Mathavan Raj</div>
+                  <div class="option">manar ashraf</div>
+                  <div class="option">Maheshkumar N</div>
+                  <div class="option">LioX Web</div>
+                  <div class="option">lala ademi</div>
+                  <div class="option">JOSE MORROBEL</div>
+                  <div class="option">Jesu V</div>
+                  <div class="option">Jancy T</div>
+                  <div class="option">Jan Jun</div>
+                  <div class="option">james ndelimo</div>
+                  <div class="option">James Tonner</div>
+                  <div class="option">Juan Berroa</div>
+                  <div class="option">ISOBot Advisors</div>
+                  <div class="option">Imran Hossen</div>
+                  <div class="option">GTS Solution GTS</div>
+                  <div class="option">dipesh yelve</div>
+                  <div class="option">dfa asf</div>
+                  <div class="option">Demo123 Demo123</div>
+                  <div class="option">cn test</div>
+                  <div class="option">Bajram Berisha</div>
+                  <div class="option">Ali K.K.</div>
+                  <div class="option">ababab ababab</div>
+                  <div class="no-match" style="display: none"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="erRor_cK_MessaGe" class="erRor_cK_MessaGe"></div>
+
+      <div class="row Notes_container NoTTo_COn-TEStAreA_MOdE">
+        <div class="col-md-12">
+          <div class="purchasegrps resmarginleft0px new_note_check_m">
+            <label for="unitname" class="emailpro mb-2 product_key_label"
+              >Notes</label
+            >
+            <textarea
+              class="textdesc check_text_padd_rem_z"
+              placeholder="Enter Notes"
+              rows="2"
+              name="note"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 blkftr">
+          <div
+            class="modal-footer taskfooter add_end_buttons check_btn_contain_padd_less"
+          >
+            <button
+              type="button"
+              class="taskclose1 mr-0"
+              data-bs-dismiss="modal"
+            >
+              CLOSE
+            </button>
+            <div class="button_su">
+              <span class="su_button_circle"> </span>
+              <!-- <button type="submit" class=" button_su_inner tasksave1 orderclr "> -->
+              <button
+                type="button"
+                class="tasksave1 ms-0 tsk-btn-mr-5"
+                onclick="validateSelection()"
+              >
+                <span class="button_text_container"> Check-Out </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="modal fade" id="modal_md" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header hdrbg">
+            <button
+              type="button"
+              class="btn-close closebtn"
+              data-bs-dismiss="modal"
+            ></button>
+            <!-- <h5 class="modal-title"></h5> -->
+            <h5 class="fnt_head mt-1 mb-0">
+              <b class="modal-title"></b>
+              <div class="vertical-line">
+                <span class="Bcgtop capsule"></span>
+                <span class="Bcgbttm capsule"></span>
+              </div>
+            </h5>
+          </div>
+
+          <div class="modal-body mbdclr"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var table = $(".example").DataTable({
+          rowReorder: {
+            selector: "td:nth-child(2)",
+          },
+          language: {
+            lengthMenu: "_MENU_",
+            search: "",
+            searchPlaceholder:
+              " Search for order ID, customer, order status or something...",
+          },
+          responsive: true,
+          dom: "Blfrtip",
+
+          buttons: [
+            {},
+
+            {
+              text: '<i class="fa-solid fa-arrow-rotate-right p-1" style="font-size:.9rem"></i>',
+            },
+            {
+              text: '<button type="button" style="font-size:0.9rem; font-weight:400; border:none;padding:0;background-color: inherit;"><i class="fas fa-cog text-muted"></i> MANIPULATION</button>',
+            },
+            {
+              text: '<i class="fa-solid fa-arrow-right-from-bracket"></i> EXPORT',
+              extend: "collection",
+              buttons: [
+                // '<span class="fexport"><i class="fa-regular fa-file-excel icn me-2"></i> EXCEL</span>', '<span class="fexport"><i class="fa-regular fa-file-lines icn me-2"></i> CSV</span>', '<span class="fexport"><i class="fa-regular fa-file-pdf icn me-2"></i> PDF</span>', '<span class="fexport"><i class="fa-solid fa-print me-2 icn"></i> PRINT</span>'
+                {},
+                {
+                  text: '<i class="fa-regular fa-file-excel icn me-2 excel-icon"></i> Excel',
+                  extend: "excel",
+                },
+                {
+                  text: '<i class="fa-regular fa-file-lines icn me-2 csv-icon"></i> CSV',
+                  extend: "csv",
+                },
+                {
+                  text: '<i class="fa-regular fa-file-pdf icn me-2 pdf-icon"></i> PDF',
+                  extend: "pdf",
+                },
+                {
+                  text: '<i class="fa-solid fa-print me-2 icn print-icon"></i> PRINT',
+                  extend: "print",
+                },
+              ],
+              className: "px-3",
+            },
+          ],
+        });
+      });
+      function checkAll() {
+        checkbox = document.getElementById("all_check");
+        if (checkbox.checked == true) {
+          $(".single_check").prop("checked", true);
+          $(".bulk_send").show(1000);
+        } else {
+          $(".single_check").prop("checked", false);
+          $(".bulk_send").hide(1000);
+        }
+      }
+      function singleCheck(id) {
+        checkbox = document.getElementById("check_" + id);
+        boxes = document.getElementsByClassName("single_check");
+
+        if (checkbox.checked == true) {
+          $(".bulk_send").show(1000);
+        } else {
+          count = 0;
+          for (let i = 0; i < boxes.length; i++) {
+            if (boxes[i].checked == true) {
+              count += 1;
+            }
+          }
+          if (count == 0) {
+            $(".bulk_send").hide(1000);
+            $("#all_check").prop("checked", false);
+          } else {
+            $(".bulk_send").show();
+          }
+        }
+      }
+
+      $(document).ready(function () {
+        const single_checks = document.querySelectorAll(".single_check");
+        const rows = document.querySelectorAll("table.dataTable tbody tr");
+        single_checks.forEach((singleCheck) => {
+          singleCheck.addEventListener("click", (e) => {
+            e.stopPropagation();
+            singleCheck.checked = false;
+          });
+          singleCheck.addEventListener("dblclick", (e) => {
+            e.stopPropagation();
+            singleCheck.checked = true;
+          });
+        });
+        rows.forEach((row) => {
+          row.addEventListener("dblclick", () => {
+            if (row.firstElementChild.children[0].checked == false) {
+              row.firstElementChild.children[0].checked = true;
+            } else {
+              row.firstElementChild.children[0].checked = false;
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      function showModal(url, title) {
+        $("#modal_md").on("shown.bs.modal", function () {
+          $(".selectpicker").selectpicker("refresh");
+        });
+        $("#modal_md").modal("show", { backdrop: "true" });
+        $.ajax({
+          url: url,
+          success: function (response) {
+            $("#modal_md .modal-title").html(title);
+            $("#modal_md .modal-body").html(response);
+          },
+        });
+      }
+    </script>
+
+    <script>
+      document.getElementById("date1").addEventListener("click", () => {
+        if ("showPicker" in HTMLInputElement.prototype) {
+          document.getElementById("date1").showPicker();
+        }
+      });
+
+      document.getElementById("date2").addEventListener("click", () => {
+        if ("showPicker" in HTMLInputElement.prototype) {
+          document.getElementById("date2").showPicker();
+        }
+      });
+
+      document.getElementById("date3").addEventListener("click", () => {
+        if ("showPicker" in HTMLInputElement.prototype) {
+          document.getElementById("date3").showPicker();
+        }
+      });
+    </script>
+
+    <script>
+      function updateLabel(selected) {
+        const staffCheckbox = document.getElementById("staff");
+        const assetCheckbox = document.getElementById("asset");
+        const dynamicLabel = document.getElementById("dynamic-label");
+        // const iNPu = document.getElementById("staff-select");
+
+        // let dd = document.querySelector(".display-input");
+
+        const dynamicSelect = document.getElementById("dynamic_select_check");
+
+        // Uncheck the other checkbox
+        if (selected === "staff") {
+          assetCheckbox.checked = false;
+          dynamicLabel.innerHTML = '<span class=" aster">* </span>Staff';
+          dynamicSelect.innerHTML = "Enter Staff Name";
+          // iNPu.placeholder = "staff";
+
+          // dd.style.border = "3px solid red";
+        } else if (selected === "asset") {
+          staffCheckbox.checked = false;
+          dynamicLabel.innerHTML = '<span class=" aster">* </span>Asset';
+          dynamicSelect.innerHTML = "Enter Asset Name";
+          // iNPu.placeholder = "asset";
+
+          // dd.style = "3px solid blue";
+        }
+      }
+    </script>
+
+    <script>
+      function validateSelection() {
+        const selectedValue = document.getElementById("staff-select").value;
+        const errorMessage = document.getElementById("erRor_cK_MessaGe");
+
+        const staffCheckbox = document.getElementById("staff");
+        const assetCheckbox = document.getElementById("asset");
+
+        if (selectedValue == "") {
+          errorMessage.textContent = "Select Staff";
+
+          if (staffCheckbox.checked) {
+            errorMessage.textContent = "Select Staff";
+          } else if (assetCheckbox.checked) {
+            errorMessage.textContent = "Select Asset";
+          } else {
+            inputBox.placeholder = "select staff";
+          }
+
+          return false;
+        } else {
+          errorMessage.textContent = "";
+        }
+      }
+    </script>
+
+    <script>
+      let bg = document.querySelectorAll(".dropdown-content div");
+
+      bg.forEach((select) => {
+        select.addEventListener("click", () => {
+          bg.forEach((d) => {
+            d.classList.remove("bg-changer_moOd");
+          });
+
+          select.classList.add("bg-changer_moOd");
+        });
+      });
+    </script>
+
+    <script>
+      // Function to initialize dropdown functionality
+      function initializeDropdowns() {
+        document.querySelectorAll(".dropdown-component").forEach((dropdown) => {
+          const displayInput = dropdown.querySelector(".display-input");
+          const searchContainer = dropdown.querySelector(".search-container");
+          const searchInput = dropdown.querySelector(".search-input");
+          const clearIcon = dropdown.querySelector(".clear-icon");
+          const dropdownContent = dropdown.querySelector(".dropdown-content");
+          const options = dropdownContent.querySelectorAll(".option");
+          const noMatchDiv = dropdownContent.querySelector(".no-match");
+
+          // Show the search input and dropdown when display input is clicked
+          displayInput.addEventListener("click", () => {
+            searchContainer.style.display = "block";
+            searchInput.focus();
+            dropdownContent.classList.add("show");
+          });
+
+          // Hide the search input and dropdown when it loses focus
+          searchInput.addEventListener("blur", () => {
+            setTimeout(() => {
+              searchContainer.style.display = "none";
+              dropdownContent.classList.remove("show");
+            }, 150);
+          });
+
+          // Filter options based on search input
+          searchInput.addEventListener("input", () => {
+            const filter = searchInput.value.toUpperCase();
+            let matchFound = false;
+
+            options.forEach((option) => {
+              if (option.textContent.toUpperCase().includes(filter)) {
+                option.style.display = "";
+                matchFound = true;
+              } else {
+                option.style.display = "none";
+              }
+            });
+
+            // Show "No match found" message if no match is found
+            noMatchDiv.style.display = matchFound ? "none" : "block";
+            noMatchDiv.textContent = `No Results Matched "${searchInput.value}"`;
+
+            // Toggle clear icon visibility
+            clearIcon.style.display = searchInput.value ? "block" : "none";
+          });
+
+          // Clear the search input when the clear icon is clicked
+          clearIcon.addEventListener("click", () => {
+            searchInput.value = "";
+            clearIcon.style.display = "none";
+            options.forEach((option) => (option.style.display = ""));
+            noMatchDiv.style.display = "none";
+            searchInput.focus();
+          });
+
+          // Select an option and display it in the display input
+          options.forEach((option) => {
+            option.addEventListener("click", () => {
+              displayInput.value = option.textContent;
+              searchInput.value = "";
+              searchContainer.style.display = "none";
+              dropdownContent.classList.remove("show");
+              clearIcon.style.display = "none";
+            });
+          });
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener("click", (event) => {
+          document
+            .querySelectorAll(".dropdown-component")
+            .forEach((dropdown) => {
+              if (!dropdown.contains(event.target)) {
+                dropdown.querySelector(".search-container").style.display =
+                  "none";
+                dropdown
+                  .querySelector(".dropdown-content")
+                  .classList.remove("show");
+              }
+            });
+        });
+      }
+
+      // Initialize dropdowns each time the modal is shown
+      document.addEventListener("shown.bs.modal", initializeDropdowns);
+    </script>
+
+    <script>
+      function updatePlaceholder() {
+        setTimeout(() => {
+          const inputBox = document.getElementById("staff-select");
+          const staffCheckbox = document.getElementById("staff");
+          const assetCheckbox = document.getElementById("asset");
+
+          if (staffCheckbox.checked) {
+            inputBox.placeholder = "select staff";
+          } else if (assetCheckbox.checked) {
+            inputBox.placeholder = "select asset";
+          } else {
+            inputBox.placeholder = "select staff";
+          }
+        }, 50); // Delay of 50ms to ensure value is updated
+      }
+    </script>
+  </body>
+</html>

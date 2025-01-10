@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Themes</title>
+
+    <!--Datatables js-->
+
+    <script
+      type="text/javascript"
+      src="../../assets/js/jquery.dataTables.min.js"
+    ></script>
+
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+
+    <script
+      type="text/javascript"
+      src="../../assets/js/dataTables.responsive.min.js"
+    ></script>
+
+    <!-- CSS -->
+    <!-- validation -->
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/theme.css" />
+
+    <!-- Select2 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+    />
+
+    <link rel="stylesheet" href="../../assets/style/hamburger.css" />
+    <link rel="stylesheet" href="../../assets/style/newstyle05_07.css" />
+    <link rel="stylesheet" href="../../assets/style/warehousestyle.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <form id="myForm" onsubmit="return validateSelection()">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="purchasegrp">
+            <label for="software-name" class="purchaseinfo"
+              ><span class="aster">* </span>Software Name</label
+            >
+            <input
+              type="text"
+              id="software-name"
+              class="form-control purchaseselects check_main_input_soft"
+              id="customer-name"
+              placeholder="Enter Software Name"
+              value="OS License"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row Notes_container">
+        <div class="col-md-12">
+          <div class="purchasegrps resmarginleft0px new_note_check_m">
+            <label for="unitname" class="emailpro mb-2 product_key_label"
+              >Notes</label
+            >
+            <textarea
+              class="textdesc check_text_padd_rem_z"
+              placeholder="Enter Notes"
+              rows="2"
+              name="note"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 blkftr">
+          <div
+            class="modal-footer taskfooter add_end_buttons check_btn_contain_padd_less"
+          >
+            <button
+              type="button"
+              class="taskclose1 mr-0"
+              data-bs-dismiss="modal"
+            >
+              CLOSE
+            </button>
+            <div class="button_su">
+              <span class="su_button_circle"> </span>
+              <!-- <button type="submit" class=" button_su_inner tasksave1 orderclr "> -->
+              <button
+                type="button"
+                class="tasksave1 ms-0 tsk-btn-mr-5"
+                onclick="validateSelection()"
+              >
+                <span class="button_text_container"> Check-In </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="modal fade" id="modal_md" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header hdrbg">
+            <button
+              type="button"
+              class="btn-close closebtn"
+              data-bs-dismiss="modal"
+            ></button>
+            <!-- <h5 class="modal-title"></h5> -->
+            <h5 class="fnt_head mt-1 mb-0">
+              <b class="modal-title"></b>
+              <div class="vertical-line">
+                <span class="Bcgtop capsule"></span>
+                <span class="Bcgbttm capsule"></span>
+              </div>
+            </h5>
+          </div>
+
+          <div class="modal-body mbdclr"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var table = $(".example").DataTable({
+          rowReorder: {
+            selector: "td:nth-child(2)",
+          },
+          language: {
+            lengthMenu: "_MENU_",
+            search: "",
+            searchPlaceholder:
+              " Search for order ID, customer, order status or something...",
+          },
+          responsive: true,
+          dom: "Blfrtip",
+
+          buttons: [
+            {},
+
+            {
+              text: '<i class="fa-solid fa-arrow-rotate-right p-1" style="font-size:.9rem"></i>',
+            },
+            {
+              text: '<button type="button" style="font-size:0.9rem; font-weight:400; border:none;padding:0;background-color: inherit;"><i class="fas fa-cog text-muted"></i> MANIPULATION</button>',
+            },
+            {
+              text: '<i class="fa-solid fa-arrow-right-from-bracket"></i> EXPORT',
+              extend: "collection",
+              buttons: [
+                // '<span class="fexport"><i class="fa-regular fa-file-excel icn me-2"></i> EXCEL</span>', '<span class="fexport"><i class="fa-regular fa-file-lines icn me-2"></i> CSV</span>', '<span class="fexport"><i class="fa-regular fa-file-pdf icn me-2"></i> PDF</span>', '<span class="fexport"><i class="fa-solid fa-print me-2 icn"></i> PRINT</span>'
+                {},
+                {
+                  text: '<i class="fa-regular fa-file-excel icn me-2 excel-icon"></i> Excel',
+                  extend: "excel",
+                },
+                {
+                  text: '<i class="fa-regular fa-file-lines icn me-2 csv-icon"></i> CSV',
+                  extend: "csv",
+                },
+                {
+                  text: '<i class="fa-regular fa-file-pdf icn me-2 pdf-icon"></i> PDF',
+                  extend: "pdf",
+                },
+                {
+                  text: '<i class="fa-solid fa-print me-2 icn print-icon"></i> PRINT',
+                  extend: "print",
+                },
+              ],
+              className: "px-3",
+            },
+          ],
+        });
+      });
+      function checkAll() {
+        checkbox = document.getElementById("all_check");
+        if (checkbox.checked == true) {
+          $(".single_check").prop("checked", true);
+          $(".bulk_send").show(1000);
+        } else {
+          $(".single_check").prop("checked", false);
+          $(".bulk_send").hide(1000);
+        }
+      }
+      function singleCheck(id) {
+        checkbox = document.getElementById("check_" + id);
+        boxes = document.getElementsByClassName("single_check");
+
+        if (checkbox.checked == true) {
+          $(".bulk_send").show(1000);
+        } else {
+          count = 0;
+          for (let i = 0; i < boxes.length; i++) {
+            if (boxes[i].checked == true) {
+              count += 1;
+            }
+          }
+          if (count == 0) {
+            $(".bulk_send").hide(1000);
+            $("#all_check").prop("checked", false);
+          } else {
+            $(".bulk_send").show();
+          }
+        }
+      }
+
+      $(document).ready(function () {
+        const single_checks = document.querySelectorAll(".single_check");
+        const rows = document.querySelectorAll("table.dataTable tbody tr");
+        single_checks.forEach((singleCheck) => {
+          singleCheck.addEventListener("click", (e) => {
+            e.stopPropagation();
+            singleCheck.checked = false;
+          });
+          singleCheck.addEventListener("dblclick", (e) => {
+            e.stopPropagation();
+            singleCheck.checked = true;
+          });
+        });
+        rows.forEach((row) => {
+          row.addEventListener("dblclick", () => {
+            if (row.firstElementChild.children[0].checked == false) {
+              row.firstElementChild.children[0].checked = true;
+            } else {
+              row.firstElementChild.children[0].checked = false;
+            }
+          });
+        });
+      });
+    </script>
+
+    <script>
+      function showModal(url, title) {
+        $("#modal_md").on("shown.bs.modal", function () {
+          $(".selectpicker").selectpicker("refresh");
+        });
+        $("#modal_md").modal("show", { backdrop: "true" });
+        $.ajax({
+          url: url,
+          success: function (response) {
+            $("#modal_md .modal-title").html(title);
+            $("#modal_md .modal-body").html(response);
+          },
+        });
+      }
+    </script>
+
+    <script>
+      document.getElementById("date1").addEventListener("click", () => {
+        if ("showPicker" in HTMLInputElement.prototype) {
+          document.getElementById("date1").showPicker();
+        }
+      });
+
+      document.getElementById("date2").addEventListener("click", () => {
+        if ("showPicker" in HTMLInputElement.prototype) {
+          document.getElementById("date2").showPicker();
+        }
+      });
+
+      document.getElementById("date3").addEventListener("click", () => {
+        if ("showPicker" in HTMLInputElement.prototype) {
+          document.getElementById("date3").showPicker();
+        }
+      });
+    </script>
+
+    <script>
+      function updateLabel(selected) {
+        const staffCheckbox = document.getElementById("staff");
+        const assetCheckbox = document.getElementById("asset");
+        const dynamicLabel = document.getElementById("dynamic-label");
+
+        const dynamicSelect = document.getElementById("dynamic_select_check");
+
+        // Uncheck the other checkbox
+        if (selected === "staff") {
+          assetCheckbox.checked = false;
+          dynamicLabel.innerHTML = '<span class=" aster">* </span>Staff';
+          dynamicSelect.innerHTML = "Enter Staff Name";
+        } else if (selected === "asset") {
+          staffCheckbox.checked = false;
+          dynamicLabel.innerHTML = '<span class=" aster">* </span>Asset';
+          dynamicSelect.innerHTML = "Enter Asset Name";
+        }
+      }
+    </script>
+
+    <script>
+      function validateSelection() {
+        const selectedValue = document.getElementById("staff-select").value;
+        const errorMessage = document.getElementById("erRor_cK_MessaGe");
+
+        if (selectedValue == "") {
+          errorMessage.textContent = "Please select an option.";
+          return false;
+        } else {
+          errorMessage.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>

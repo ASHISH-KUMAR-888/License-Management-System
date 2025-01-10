@@ -1,0 +1,60 @@
+h5,
+    .h5 {
+        font-size: 18px !important;
+    }
+
+    #drop-zone {
+        position: relative;
+        max-width: 450px;
+        min-height: 200px;
+        border: 2px dotted #02a9f4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    #myfile {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+
+    .text-container {
+        display: flex;
+    }
+
+    .delete-button {
+        display: none;
+        margin: 10px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .file-name {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .border-test {
+        border: 5px solid gray !important;
+        border-radius: 4px !important;
+        padding: 10px !important;
+        border-style: dotted dashed !important;
+    }
+
+    .bordertest-padding {
+        padding: 5rem !important;
+        padding-top: 2rem !important;
+    }
+
+    .ml {
+        margin-left: 5px;
+    }
